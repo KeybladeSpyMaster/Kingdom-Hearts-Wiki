@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+        <title>Options flyout</title>
+        <script>
+            function disableSearch() {
+                Windows.ApplicationModel.Search.SearchPane.getForCurrentView().showOnKeyboardInput = false;
+            }
+        </script>
+    </head>
+    <body>
+        <div id="aboutdiv" style="background:#454659; color:#ffffff;" data-win-control="WinJS.UI.SettingsFlyout" data-win-options="{settingsCommandId:'options',width:'narrow'}">
+            <div class="win-header">
+                <button type="button" onclick="WinJS.UI.SettingsFlyout.show()" class="win-backbutton"></button>
+                <div class="win-label" style="color:#ffffff;">Options</div>
+                <img src="/images/smalllogo.scale-100.png" style="position: absolute; right: 40px">
+            </div>
+            <div class="win-content" style="background:#91a0e1; color:#000000;">
+                <b>COMING SOON!</b>
+                <br />
+                <small>The options shown here are still in development, and will hopefully make it in a future release!</small>
+                <br />
+                <h2>Login</h2>
+                <div id="loggedInAs">Can't Log in</div>
+                <p>Username</p>
+                    <div class="input">
+                        <input id="wpName" class="input" type="text" value="" onfocus="disableSearch()" disabled/>
+                    </div>
+                <p>Password</p>
+                    <div class="input">
+                        <input id="wpPassword" type="password" disabled/>
+                    </div>
+                <br />
+                <input type="button" class="submit" title="Log In" value="Log In" onclick="Login (wpName.value, wpPassword.value)" disabled/>
+                <div class="remember">
+                    <input id="fe3" type="checkbox" name="chk1" disabled /><label for="fe3">Remember Me</label>
+                </div>
+                <br />
+                <br />
+                <h2>Notifications</h2>
+                <p>Enable notifications for changes to user talk page.</p>
+                <div data-win-control="WinJS.UI.ToggleSwitch" data-win-options="{ disabled: true}">
+                </div>
+                <p>Enable notifications for changes to pages on your watchlist.</p>
+                <div data-win-control="WinJS.UI.ToggleSwitch" data-win-options="{ disabled: true}">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

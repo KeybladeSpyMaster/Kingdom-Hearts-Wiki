@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+  <Identity Name="63855KeybladeSpyMaster.KingdomHeartsWiki" Version="1.1.0.0" Publisher="CN=CC55D6D6-545F-41B8-A571-9F576FA64543" />
+  <Properties>
+    <DisplayName>Kingdom Hearts Wiki</DisplayName>
+    <PublisherDisplayName>KeybladeSpyMaster</PublisherDisplayName>
+    <Logo>images\storelogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.0</OSMinVersion>
+    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" StartPage="default.html">
+      <m2:VisualElements DisplayName="Kingdom Hearts Wiki" Description="Kingdom Hearts Wiki for Windows 8" ForegroundText="light" BackgroundColor="#454659" Square150x150Logo="images\Logo.png" Square30x30Logo="images\SmallLogo.png">
+        <m2:DefaultTile ShortName="Kingdom Hearts Wiki" Wide310x150Logo="images\Wide310x150Logo.png" DefaultSize="wide310x150Logo" Square70x70Logo="images\Square70x70Logo.png">
+        </m2:DefaultTile>
+        <m2:SplashScreen Image="images\splashscreen.png" BackgroundColor="#454659" />
+      </m2:VisualElements>
+      <Extensions>
+        <Extension Category="windows.search" />
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>
